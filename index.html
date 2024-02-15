@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Honkai: Star Rail | HTML & CSS</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+  
+    <aside class="main-menu">
+
+      <input type="checkbox" id="toggleMenu" checked />
+      <div class="left-menu">
+        <img class="bg-menu" src="./img/bg-menu.webp" alt="">
+
+        <section class="user-profile-container">
+          <div class="user-profile-top">
+            <span class="uid-account">UID 69696969 <i class='bx bxs-copy' ></i></span>
+
+            <div class="smartphone-icons">
+              <i class='bx bx-signal-4' ></i>
+              <i class='bx bxs-battery' ></i>
+            </div>
+          </div>
+
+          <div class="user-profile-info">
+            <div class="user-profile-info-top">
+              <div class="user-profile-info-container">
+
+                <img class="user-avatar" src="./img/avatar.jpg" alt="User avatar">
+  
+                <div class="user-profile-username-level">
+                  <span class="username">CoalsPlay</span>
+                  <span class="level">Nivel de equilibrio 6</span>
+                </div>
+              </div>
+
+              <a class="btn-more-options" href="#">
+                <i class='bx bx-dots-horizontal-rounded' ></i>
+              </a>
+            </div>
+
+            <div class="user-profile-signature">
+                Esto se supone que es la firma JEJ
+            </div>
+          </div>
+
+          <div class="user-profile-bottom">
+            <div class="progress-info-container">
+              <span>Niv. trazacaminos 70</span>
+              <span>Nivel máximo</span>
+            </div>
+            <div class="progress-bar"></div>
+          </div>
+        </section>
+
+        <section class="menu-btns-container">
+          <div class="main-btns-container">
+
+            <a class="main-btn" href="#">
+              <span class="main-btn-title">Tienda</span>
+              <div class="square"></div>
+              <div class="square"></div>
+              <img src="./img/Icon_Store.webp" alt="Icon Store">
+            </a>
+            <a class="main-btn" href="#">
+              <img src="./img/Icon_Friends-2.png" alt="Icon Friends">
+              <span class="main-btn-title">Amigos</span>
+            </a>
+            <a class="main-btn" href="#">
+              <img src="./img/Icon_Assignments.webp" alt="Icon Jobs">
+              <span class="main-btn-title">Encargos</span>
+            </a>
+            <a class="main-btn" href="#">
+              <span class="main-btn-title">Diario de viaje</span>
+              <div class="square"></div>
+              <div class="square"></div>
+              <img src="./img/Icon_Travel_Log.webp" alt="Icon Events">
+            </a>
+            <a class="main-btn" href="#">
+              <img  src="./img/Icon_Synthesis.webp" alt="Icon Synthesis">
+              <span class="main-btn-title">Síntesis</span>
+            </a>
+            <a class="main-btn" href="#">
+              <img class="btn-icon" src="./img/Icon_Achieved-2.png" alt="Icon Achieved">
+              <span class="main-btn-title">Logros</span>
+            </a>
+            <a class="main-btn" href="#">
+              <img src="./img/Icon_msg-2.png" alt="Icon Message">
+              <span class="main-btn-title">Mensajes</span>
+              <div class="circle-notif">!</div>
+            </a>
+            <a class="main-btn" href="#">
+              <img src="./img/System_Nameless_Honor.webp" alt="Icon BP">
+              <span class="main-btn-title">Honor anónimo</span>
+            </a>
+            <a class="main-btn" href="#">
+              <img src="./img/Icon_Warp.webp" alt="Icon Warp">
+              <span class="main-btn-title">Salto</span>
+            </a>
+            <a class="main-btn" href="#">
+              <img src="./img/Icon_Character-2.png" alt="Icon Character">
+              <span class="main-btn-title">Personajes</span>
+            </a>
+            <a class="main-btn" href="#">
+              <img src="./img/Icon_MA-2.png" alt="Icon MA">
+              <span class="main-btn-title">Guía</span>
+            </a>
+            <a class="main-btn" href="#">
+              <img src="./img/Icon_Data_Bank.webp" alt="Icon Data Bank">
+              <span class="main-btn-title">Archivos</span>
+            </a>
+            <a class="main-btn" href="#">
+              <img src="./img/Icon_Bookshelf.webp" alt="Icon Book">
+              <span class="main-btn-title">Estantería</span>
+            </a>
+            <a class="main-btn" href="#">
+              <img src="./img/Icon_Tutorials.webp" alt="Icon Tutorial">
+              <span class="main-btn-title">Tutoriales</span>
+            </a>
+          </div>
+        </section>
+
+        <footer class="footer-copy">
+          Menú de Honkai Star Rail con HTML y CSS &copy;<br> 
+          Desarrollado por: <a href="https//x.com/CoalsPlay">CoalsPlay</a>
+        </footer>
+      </div>
+      
+      <div class="right-menu">
+
+        <label for="toggleMenu" class="toggleMenu">
+          <img src="./img/iconToggle.svg" class="iconToggleMenu" alt="">
+        </label>
+
+        <div class="group-btns-general">
+          <ul class="group-btns">
+            <li>
+              <a href="#">
+              <img src="./img/Icon_Email-2.png" alt="Icon Email">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./img/Icon_News-2.png" alt="Icon News">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./img/Icon_Settings-2.png" alt="Icon Settings">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./img/Icon_Photo-2.png" alt="Icon Photo">
+              </a>
+            </li>
+          </ul>
+
+          <a href="#">
+            <img src="./img/Icon_Logout-2.png" alt="Icon Logout">
+          </a>
+        </div>
+      </div>
+
+    </aside>
+
+    <script>
+      const inputToggleMenu = document.querySelector('#toggleMenu');
+      const iconToggleMenu = document.querySelector('.iconToggleMenu');
+
+      iconToggleMenu.addEventListener('click', () => {
+        inputToggleMenu.checked === false
+        ? iconToggleMenu.setAttribute('src', './img/iconToggle.svg')
+        : iconToggleMenu.setAttribute('src', './img/Icon_Close-2.png');
+      });
+    </script>
+
+  </body>
+</html>

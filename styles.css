@@ -1,0 +1,352 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+body {
+  background: url('./img/bg.webp') no-repeat top;
+  background-size: cover;
+  background-color: rgb(30, 27, 59);
+  position: relative;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+ul { list-style: none; }
+a { text-decoration: none; }
+
+#toggleMenu { display: none; }
+
+#toggleMenu:checked + .left-menu {
+  transform: translateX(130%);
+}
+
+.toggleMenu { cursor: pointer; }
+
+.main-menu {
+  width: max-content; height: 100vh;
+  display: flex;
+  justify-content: end;
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  & .right-menu {
+    background-color: rgba(0,0,0,0.95);
+    min-width: 90px;
+    max-width: 90px;
+    height: 100%;
+    display: flex; flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0.9rem;
+    z-index: 10;
+    border-left: 1px solid #e1e1e150;
+
+    .group-btns-general {
+      width: 100%;
+      height: 85%;
+      display: flex; flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      border-radius: 999px;
+      padding: 1rem 0;
+      padding-top: 3.5rem;
+      border: 2px solid #e1e1e130;
+
+      .group-btns {
+        width: 100%; height: 100%;
+        display: flex; flex-direction: column;
+        align-items: center;
+        gap: 50px;
+
+        & > li > a {
+          padding: 0.4rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%; height: 100%;
+          transition: background .2s ease-in;
+          border-radius: 3px;
+        }
+
+        & > li > a:hover {
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+      }
+    }
+  }
+
+  & .left-menu {
+    background-color: rgba(0,0,0,0.3);
+    backdrop-filter: blur(1px);
+    width: 500px; height: 100%;
+    border-left: 2px solid #e1e1e150;
+    border-right: 2px solid #e1e1e150;
+    border-radius: 0 30px 0 0;
+    position: absolute;
+    right: 92px;
+    display: flex; flex-direction: column;
+    transition: transform .5s ease-in;
+    transform: translateX(0);
+    overflow: hidden;
+
+    > .bg-menu {
+      opacity: 0.8;
+      width: 100%; height: auto;
+      object-fit: cover;
+      object-position: top;
+      position: absolute;
+    }
+
+    .user-profile-container {
+      width: 100%; height: 380px;
+      padding: 1.5rem;
+      padding-bottom: 0.8rem;
+      color: white;
+      position: relative;
+      display: flex; flex-direction: column;
+      gap: 10px;
+
+      .user-profile-top {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        .uid-account {
+          font-size: 1.2rem;
+          border-bottom: 2px solid #e1e1e160;
+          padding-bottom: 3px;
+          cursor: pointer;
+          opacity: 0.6;
+          transition: opacity .3s ease-in;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+
+        .smartphone-icons {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+
+          & > i {
+            font-size: 1.2rem;
+          }
+
+          & > i:first-child {
+            position: relative;
+            top: -1px;
+          }
+        }
+      }
+
+      .user-profile-info {
+        width: 100%; height: auto;
+        margin-top: 10px;
+        display: flex; flex-direction: column;
+
+        & .user-profile-info-top {
+          display: flex;
+          gap: 10px;
+          justify-content: space-between;
+
+          & .user-profile-info-container {
+            display: flex;
+            gap: 0.7rem;
+            align-items: center;
+
+            & .user-profile-username-level {
+              display: flex; flex-direction: column;
+              gap: 5px;
+
+              & .username {
+                font-size: 1.5rem;
+                font-weight: 500;
+              }
+
+              & .level {
+                font-size: 1.25rem;
+                color: #c8c0a3;
+              }
+            }
+
+            & .user-avatar {
+              width: 90px; height: 90px;
+              border-radius: 50rem;
+              border: 2px solid #e1e1e1;
+            }
+          }
+
+          .btn-more-options {
+            background-color: white;
+            width: 50px; height: 24px;
+            border-radius: 999px;
+            font-size: 1.1rem;
+            text-align: center;
+            position: relative;
+            top: 18px;
+            color: #000;
+            box-shadow: 0 0 2px 1px rgba(0,0,0,0.4);
+            transition: transform .2s ease-in;
+
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+
+        .user-profile-signature {
+          background-color: rgba(0,0,0,0.4);
+          width: 100%; height: 60px;
+          margin-top: 10px;
+          border-radius: 6px;
+          padding: 2px 4px;
+          overflow: hidden;
+          font-size: 1.25rem;
+          color: #cfcfcf;
+        }
+      }
+
+      .user-profile-bottom {
+        width: 100%; height: 40px;
+        display: flex; flex-direction: column;
+        gap: 4px;
+
+        & .progress-info-container {
+          display: flex;
+          justify-content: space-between;
+          font-size: 1.2rem;
+
+          & span:first-child {
+            color: #d6ceaf;
+          }
+
+          & span:last-child {
+            color: #cfcfcf;
+          }
+        }
+
+        & .progress-bar {
+          width: 100%; height: 3px;
+          background-color: #c8c0a3;
+          border-radius: 999px;
+        }
+      }
+    }
+
+    .menu-btns-container {
+      width: 100%; height: 100%;
+      padding: 1.5rem;
+      padding-top: 0;
+      position: relative;
+      overflow-y: auto;
+
+      & .main-btns-container {
+        width: 100%; height: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-rows: repeat(auto-fit, minmax(100px, 100px));
+        gap: 12px;
+        justify-content: space-between;
+
+        & .main-btn {
+          min-height: 100px;
+          background-color: rgba(0,0,0,0.4);
+          border: 2px solid #e1e1e130;
+          display: flex; flex-direction: column;
+          align-items: center;
+          justify-content: end;
+          padding: 10px;
+          position: relative;
+          text-align: center;
+
+          & > img {
+            width: 50px; height: auto;
+            position: absolute;
+            top: 10px;
+            opacity: 0.9;
+          }
+
+          & .main-btn-title {
+            color: #e1e1e1;
+            font-size: 1.2rem;
+          }
+
+          & .square {
+            width: 64px; height: 64px;
+            border: 2px solid #c8c0a320;
+            position: absolute;
+            right: 16px;
+            top: 0; bottom: 0;
+            margin: auto;
+          }
+
+          & .square:nth-child(2) {
+            transform: rotate(45deg)
+          }
+
+          & .circle-notif {
+            width: 19px; height: 19px;
+            background-color: #d5382d;
+            position: absolute;
+            border-radius: 999px;
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: bold;
+            top: 0;
+            right: 0;
+            transform: translate(50%, -50%);
+          }
+
+          &:hover {
+            background-color: rgba(255,255,255,0.05);
+          }
+        }
+
+        & .main-btn:nth-child(1), .main-btn:nth-child(4) {
+          grid-column: span 2;
+          align-items: end;
+          flex-direction: row;
+          justify-content: start;
+          padding-right: 1.5rem;
+
+          & > img {
+            right: 25px;
+            top: 0; bottom: 0;
+            margin: auto;
+          }
+
+          & .main-btn-title {
+            align-self: end;
+          }
+        }
+
+        & .main-btn:nth-child(2) > img {
+          width: 42px;
+        }
+
+        & .main-btn:nth-child(8) > .main-btn-title {
+          font-size: 0.9rem;
+          line-height: 15px;
+        }
+      }
+    }
+
+    & .footer-copy {
+      position: relative;
+      text-align: center;
+      color: #fff;
+      padding: 1.5rem;
+
+      & > a {
+        color: #c8c0a3;
+        font-weight: bold;
+      }
+    }
+  }
+}
